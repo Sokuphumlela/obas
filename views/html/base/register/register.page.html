@@ -69,7 +69,15 @@
                     <input type="email" name="email" value="email" onFocus="field_focus(this, 'email');"
                            onblur="field_blur(this, 'email');" class="email"/>
 
-                    <button type="submit" class="btn">Submit</button><!-- End Btn -->
+                    <button type="submit" class="btn" onclick="myFunction()">Sing up</button>
+
+                    <script>
+                        function myFunction() {
+                            alert("temporal password have been sent for you to sign in");
+                        }
+                    </script>
+
+
 
                 </div> <!-- End Box -->
 
@@ -122,6 +130,10 @@
     $('a').click(function (event) {
         // event.preventDefault();
     });
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
 
 </script>
 </html>

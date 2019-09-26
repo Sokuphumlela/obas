@@ -10,6 +10,10 @@ type Register struct {
 }
 
 type LoginToken struct {
-	Email string `json:"email"`
+	Email string
 	Token string `json:"token"`
+}
+
+type ForgotPassword struct {
+	Email string `json:"email"`
 }
